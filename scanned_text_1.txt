@@ -1,0 +1,9 @@
+git
+howcanourexistingcodeuploadgitrepo
+project
+gitgiEOLCOameraviasionmachinelearning()CMLVProject
+basedonthepythonuploadgithubpythonproject
+usingcommandprompt
+cmd
+dir
+gitinit

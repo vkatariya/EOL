@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Images</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <style>
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .image-header {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-danger text-white text-center py-2">
+        <h3 class="text-center">Predicted Images for Part & Serial No: {{ row.part_no }} / {{ row.serial_number }}</h3> 
+    </header>
+    <div class="container mt-4">
+        <h2>Images for Serial Number: {{ row.serial_number }}</h2>
+        <div class="row">
+            <div class="col-md-4 image-container">
+                <div class="image-header">Eclip</div>
+                <img src="{{ url_for('static', filename='quality_check_prediction_folder/' + row.eclip_path) }}" class="img-fluid" alt="Eclip Image">
+            </div>
+            <div class="col-md-4 image-container">
+                <div class="image-header">Dataplate Screw</div>
+                <img src="{{ url_for('static', filename='quality_check_prediction_folder/' + row.dataplate_screw_path) }}" class="img-fluid" alt="Dataplate Screw Image">
+            </div>
+            <div class="col-md-4 image-container">
+                <div class="image-header">NBBR</div>
+                <img src="{{ url_for('static', filename='quality_check_prediction_folder/' + row.nbbr_path) }}" class="img-fluid" alt="NBBR Image">
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="{{ url_for('home') }}" class="btn btn-primary">Back</a>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>
