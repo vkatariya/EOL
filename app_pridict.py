@@ -256,14 +256,14 @@ file_path = base_path + r"scanned_text_1.txt"
 def get_db_connection():
     """Establish and return a database connection."""
     server = '(localdb)\\MSSQLLocalDB'   
-    #server = 'THLXSWPSQLDB12'
-    #user= 'ALDBU'
-    #password = 'CTT@Dewas'
+    #server = ''
+    #user= ''
+    #password = ''
     database = 'EOL_CHECKING'
     #database = 'MitsProjectDbNew'
    
-    #database = 'SAIMS'
-    #server = 'THLXSWPSQLDB11'
+    #database = ''
+    #server = ''
     driver = '{ODBC Driver 17 for SQL Server}'  # Adjust the driver according to your SQL Server version
 
     try:
